@@ -1,14 +1,14 @@
 pipeline {
     agent any
     tools {
-        maven "maven3"
+        maven "maven_home"
     }
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "18.206.74.244:8081"
+        NEXUS_URL = "34.238.154.222:8081"
         NEXUS_REPOSITORY = "maven-releases"
-        NEXUS_CREDENTIAL_ID = "nexus-credentials"
+        NEXUS_CREDENTIAL_ID = "nexus"
     }
     stages {
         stage("SCM") {
